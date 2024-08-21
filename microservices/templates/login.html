@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger Seat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="login-container">
+        <div class="left">
+            <img src="{{ url_for('static', filename='pass.png') }}" alt="Passenger Seat Logo">
+        </div>
+        <div class="right">
+            <div class="form-container">
+                <h2>Sign in</h2>
+                <form action="{{ url_for('login') }}" method="POST">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="passcode" placeholder="Passcode" required pattern="\d+" title="Passcode should only contain numbers">
+                    
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <div class="flash-messages">
+                                {% for message in messages %}
+                                    {{ message }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    {% endwith %}
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

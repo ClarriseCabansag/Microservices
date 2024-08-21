@@ -1,0 +1,93 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.left {
+    width: 30%;
+    background-color: #fdf8ed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.left img {
+    max-width: 200%;
+    height: 40%;
+}
+
+.right {
+    width: 90%;
+    padding: 20px;
+    background-image: url('/static/image.png');
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-position: center; /* Keeps the image centered */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.form-container h2 {
+    color: #cc0000;
+    margin-top: 1px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 15px;
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #b30000;
+}
+
+/* Styling for flash messages */
+.flash-messages {
+    color: red;
+    margin-top: -10px; /* Adjusts the position to be right below the passcode field */
+    margin-bottom: 20px; /* Space below the flash message */
+    font-size: 16px;
+}
